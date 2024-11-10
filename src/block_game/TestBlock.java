@@ -1,4 +1,4 @@
-package assignment3;
+package block_game;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

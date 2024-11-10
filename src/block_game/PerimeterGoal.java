@@ -1,4 +1,4 @@
-package assignment3;
+package block_game;
 
 import java.awt.Color;
 
@@ -10,9 +10,6 @@ public class PerimeterGoal extends Goal{
 
 	@Override
 	public int score(Block board) {
-		/*
-		 * ADD YOUR CODE HERE
-		 */
 	    Color[][] arr = board.flatten();
 	    int score = 0;
 	    //top row

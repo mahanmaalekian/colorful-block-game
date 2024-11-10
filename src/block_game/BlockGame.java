@@ -1,4 +1,4 @@
-package assignment3;
+package block_game;
 
 import java.awt.*;
 import javax.swing.*;

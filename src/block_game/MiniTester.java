@@ -1,4 +1,4 @@
-package assignment3;
+package block_game;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;

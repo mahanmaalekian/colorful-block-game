@@ -1,6 +1,5 @@
-package assignment3;
+package block_game;
 
-import java.security.KeyStore;
 import java.util.ArrayList;
 import java.util.Random;
 import java.awt.Color;
@@ -67,9 +66,6 @@ public class Block {
   * (i.e. they will all be initialized by default)
   */
  public Block(int lvl, int maxDepth) {
-  /*
-   * ADD YOUR CODE HERE
-   */
   this.level = lvl;
   this.maxDepth = maxDepth;
   if (lvl < maxDepth && gen.nextDouble() < Math.exp(-0.25 * lvl)){
@@ -96,9 +92,7 @@ public class Block {
   *  coordinates of the top left corner of the block. 
   */
  public void updateSizeAndPosition (int size, int xCoord, int yCoord) {
-  /*
-   * ADD YOUR CODE HERE
-   */
+
       if (size < 0 || size % Math.pow(2, maxDepth-level) != 0){
        throw new IllegalArgumentException("Input size is invalid");
       }
@@ -131,9 +125,7 @@ public class Block {
   * The order in which the blocks to draw appear in the list does NOT matter.
   */
  public ArrayList<BlockToDraw> getBlocksToDraw() {
-  /*
-   * ADD YOUR CODE HERE
-   */
+
   ArrayList<BlockToDraw> list = new ArrayList<>();
   if (children.length == 0){
       list.add(new BlockToDraw(color, xCoord, yCoord, size, 0));
@@ -217,9 +209,7 @@ public class Block {
   * 
   */
  public void reflect(int direction) {
-  /*
-   * ADD YOUR CODE HERE
-   */
+
      if (direction != 0 && direction != 1) {
          throw new IllegalArgumentException("Reflection direction should be 1 or 0");
      }
@@ -247,16 +237,14 @@ public class Block {
 
      }
      else {
-//        children[1].xCoord = children[1].xCoord + size/2;
-//        children[0].xCoord = children[0].xCoord - size/2;
+
          children[1].shiftX(size/2);
          children[0].shiftX(-size/2);
         Block tmp = children[0];
         children[0]  = children[1];
         children[1] = tmp;
 
-//        children[2].xCoord = children[2].xCoord + size/2;
-//        children[3].xCoord = children[3].xCoord - size/2;
+
          children[2].shiftX(size/2);
          children[3].shiftX(-size/2);
         Block tmp2 = children[2];
@@ -264,9 +252,7 @@ public class Block {
         children[3] = tmp2;
 
      }
-//     for (int i = 0; i<4; i++){ //add here?
-//         children[i].reflect(direction);
-//     }
+
  }
 
 private void shiftY(int shift){
