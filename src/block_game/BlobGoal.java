@@ -10,9 +10,6 @@ public class BlobGoal extends Goal{
 
 	@Override
 	public int score(Block board) {
-		/*
-		 * ADD YOUR CODE HERE
-		 */
 	    int max = 0;
 	    int tmp;
 	    Color[][] unitCells = board.flatten();
@@ -44,9 +41,6 @@ public class BlobGoal extends Goal{
 
 
 	public int undiscoveredBlobSize(int i, int j, Color[][] unitCells, boolean[][] visited) {
-		/*
-		 * ADD YOUR CODE HERE
-		 */
 	    if (i >= unitCells.length || i < 0 || j >= unitCells.length || j <0){
 		return 0;
 	    }
